@@ -4,7 +4,7 @@ The API provides filtering functionality allowing clients to select resources wh
 
 ### How to check if  my resource match a certain criteria ?
 
-Use one of the filter in the package ```  com.forgerock.filter.types ```  and call the match method.<br/>
+Use one of the filter in the package ```  com.forgerock.filter.types ```  and call the matches method.<br/>
 Example :
 ``` 
 new GreaterFilter("test","alex").matches(MY_RESOURCE)
@@ -12,7 +12,7 @@ new GreaterFilter("test","alex").matches(MY_RESOURCE)
 
 ### How to combine filters ?
 
-You can use operators filters to combine filter. Those filters implement ```FilterOperator``` . You can combine as many filters as you want<br/>
+You can use operator filters to combine filters. These filters implement ```FilterOperator``` . You can combine as many filters as you want<br/>
 Example :
 ``` 
 new ANDFilter(new EqualsFilter("lastname","Walt"),new EqualsFilter("firstname","Joe"))
